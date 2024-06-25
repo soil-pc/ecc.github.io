@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ECC - Ethical Hacking Tool Collection</title>
+    <title>ECC Client</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,6 +13,7 @@
             --background-dark: #000000;
             --text-color-dark: #ffffff;
             --accent-color-dark: #00bcd4;
+            --contact-color: #800080; /* Purple color for Contact US */
         }
 
         body {
@@ -71,7 +72,7 @@
             margin-top: 0;
         }
 
-        .license, .terms {
+        .license, .terms, .contact {
             padding: 15px;
             margin-bottom: 20px;
             border-radius: 5px;
@@ -83,6 +84,14 @@
 
         .terms {
             background-color: #f1f8e9;
+        }
+
+        .contact {
+            background-color: #f4e5ff; /* Light purple background */
+        }
+
+        .contact h2 {
+            color: var(--contact-color); /* Purple text color */
         }
 
         .download-link {
@@ -170,7 +179,7 @@
             color: var(--accent-color-dark);
         }
 
-        body.dark-mode p, body.dark-mode .license, body.dark-mode .terms {
+        body.dark-mode p, body.dark-mode .license, body.dark-mode .terms, body.dark-mode .contact {
             color: var(--text-color-dark);
         }
 
@@ -199,13 +208,15 @@
         body.dark-mode .terms {
             background-color: #2e4d2e;
         }
+        body.dark-mode .contact {
+            background-color: #2a1f2e;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>ECC - Elysion Celestial Code</h1>
-        <p class="version">BETA v.1.4.1</p>
-        <p>ECC offers a collection of powerful hacking tools, including DDoS, ransomware, and Wifite. Use with extreme caution.</p>
+		<p class="version"> A powerful Hacking Tool such as DDoS, ransomware, and Wifite.</p>
 
         <div class="warning">
             <h2>Warnings:</h2>
@@ -244,11 +255,19 @@
             <p>Maintain confidentiality of login information. You are responsible for your actions.</p>
             <p>By using ECC, you agree to these terms.</p>
         </div>
-		
-        <p> To download ECC, you need a passkey to unzip the ECC client.<p/>
-		<p> Please contact the admin to receive the passkey.<p/>
+
+        <div class="contact">
+            <h2>Contact US</h2>
+            <p><strong>Email:</strong> soilpcmail@gmail.com</p>
+            <p><strong>Instagram:</strong> SOIL-PC</p>
+			<p><strong>Telegram:</strong> SOIL-PC</p>
+            <p><strong>BTC Donation:</strong> bc1q4wxzylndr4xayj9h8u3zldufs8d43m87rqt0lp</p>
+        </div>
+
+        <p>To download ECC, you need a passkey to unzip the ECC client.</p>
+        <p>Please contact the admin to receive the passkey.</p>
         <a class="download-link" href="https://zrr.kr/Sax7" download>Download via. Mediafire</a>
-		<p> Latest version: 1.5.0<p/>
+        <p>Latest version: 1.5.0</p>
     </div>
     <div class="footer">
         &copy; 2024 ECC | SOIL-PC 
@@ -261,11 +280,11 @@
     </div>
 
     <script>
-        const modeToggle = document.getElementById('mode-toggle');
+        const toggle = document.getElementById('mode-toggle');
         const body = document.body;
 
-        modeToggle.addEventListener('change', function() {
-            body.classList.toggle('dark-mode');
+        toggle.addEventListener('change', () => {
+            body.classList.toggle('dark-mode', toggle.checked);
         });
     </script>
 </body>
